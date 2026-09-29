@@ -16,12 +16,12 @@ export class GenerateEmbeddingNode extends ExecuteNode {
     ];
 
     readonly inputs: InputDefinition[] = [
-        { name: 'Text', acceptsType: 'string' }
+        { name: 'Text', acceptsType: 'core:string' }
     ];
 
     readonly outputs: OutputDefinition[] = [
-        { name: 'Success', outputType: 'boolean' },
-        { name: 'Embedding', outputType: 'array' }
+        { name: 'Success', outputType: 'core:boolean' },
+        { name: 'Embedding', outputType: 'core:array' }
     ];
 
     private async getProvider(properties: Record<string, any>): Promise<string> {

@@ -18,13 +18,13 @@ export class PromptModelNode extends ExecuteNode {
     ];
 
     readonly inputs: InputDefinition[] = [
-        { name: 'Content', acceptsType: 'string' }
+        { name: 'Content', acceptsType: 'core:string' }
     ];
 
     readonly outputs: OutputDefinition[] = [
-        { name: 'Success', outputType: 'boolean' },
-        { name: 'Result', outputType: 'string' },
-        { name: 'Error', outputType: 'string' }
+        { name: 'Success', outputType: 'core:boolean' },
+        { name: 'Result', outputType: 'core:string' },
+        { name: 'Error', outputType: 'core:string' }
     ];
 
     private async getProvider(properties: Record<string, any>): Promise<string> {

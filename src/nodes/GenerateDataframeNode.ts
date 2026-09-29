@@ -20,14 +20,14 @@ export class GenerateDataframeNode extends ExecuteNode {
     ];
 
     readonly inputs: InputDefinition[] = [
-        { name: 'Content', acceptsType: 'string' },
+        { name: 'Content', acceptsType: 'core:string' },
         { name: 'Schema', acceptsType: 'core:dataframe' }
     ];
 
     readonly outputs: OutputDefinition[] = [
-        { name: 'Success', outputType: 'boolean' },
+        { name: 'Success', outputType: 'core:boolean' },
         { name: 'Dataframe', outputType: 'core:dataframe' },
-        { name: 'Error', outputType: 'string' }
+        { name: 'Error', outputType: 'core:string' }
     ];
 
     private async getProvider(properties: Record<string, any>): Promise<string> {
