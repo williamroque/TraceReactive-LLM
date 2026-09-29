@@ -15,8 +15,8 @@ const serializableNodes = nodes.map(n => ({
     category: n.category,
     nodeInterface: n.nodeInterface,
     visible: n.visible,
-    inputs: n.nodeInterface === 'execute' || n.nodeInterface === 'event' ? (n as any).getInputs() : n.inputs,
-    outputs: n.nodeInterface === 'execute' || n.nodeInterface === 'event' ? (n as any).getOutputs() : n.outputs,
+    inputs: n.inputs,
+    outputs: n.outputs,
     properties: n.properties,
     dynamicInputs: n.dynamicInputs,
     dynamicOutputs: n.dynamicOutputs
