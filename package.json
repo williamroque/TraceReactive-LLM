@@ -1,0 +1,17 @@
+{
+  "name": "@tracereactive/llm",
+  "version": "1.0.0",
+  "description": "TraceReactive LLM package",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "esbuild src/index.ts --bundle --outfile=dist/index.js --platform=browser --format=iife --global-name=__TraceReactive_Package",
+    "build:trpkg": "npm run build && node scripts/build-trpkg.js",
+    "dev": "npm run build -- --watch"
+  },
+  "devDependencies": {
+    "@tracereactive/types": "file:../types",
+    "adm-zip": "^0.6.1",
+    "esbuild": "^0.25.0",
+    "typescript": "^5.7.3"
+  }
+}

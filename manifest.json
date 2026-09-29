@@ -1,0 +1,45 @@
+{
+  "id": "tracereactive.llm",
+  "name": "LLM Integration",
+  "version": "1.0.0",
+  "description": "Integration with Ollama and Gemini for language modeling and embeddings.",
+  "main": "dist/index.js",
+  "permissions": ["net:fetch"],
+  "settings": [
+    {
+      "id": "defaultProvider",
+      "label": "Default Provider",
+      "type": "select",
+      "options": ["Ollama", "Gemini"],
+      "default": "Ollama",
+      "description": "The default AI provider to use."
+    },
+    {
+      "id": "ollamaUrl",
+      "label": "Ollama Base URL",
+      "type": "string",
+      "default": "http://localhost:11434",
+      "description": "The base URL for your local Ollama instance."
+    },
+    {
+      "id": "geminiKey",
+      "label": "Gemini API Key",
+      "type": "password",
+      "description": "Your Google Gemini API Key."
+    },
+    {
+      "id": "defaultOllamaModel",
+      "label": "Default Ollama Model",
+      "type": "string",
+      "default": "llama3",
+      "description": "The default model when using Ollama."
+    },
+    {
+      "id": "defaultGeminiModel",
+      "label": "Default Gemini Model",
+      "type": "string",
+      "default": "gemini-1.5-flash",
+      "description": "The default model when using Gemini."
+    }
+  ]
+}
